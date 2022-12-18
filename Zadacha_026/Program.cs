@@ -37,28 +37,48 @@
 
 //------------------------  START  -----------------------------------------------------------------
 
-int DataEntry(string str) // метод ввода числа
+// int DataEntry(string str) // метод ввода числа
+// {
+//     Console.WriteLine(str);
+//     int num = int.Parse(Console.ReadLine());
+//     return num;
+// }
+
+// int CountHunter(int number) // метод подсчёта количества цифр
+// {
+//     int i = 0;
+//     if (number < 0) number = -number;
+//     for (i = 0; number > 0; i++)
+//     {
+//         number = number / 10;
+//     }
+//     return i;
+// }
+
+// //---------------------  РАБОЧАЯ ОБЛАСТЬ  ----------------------------------------------------------
+
+// int number = DataEntry("Введите число: ");
+// int count = CountHunter(number);
+
+// Console.WriteLine($"Количество цифр:  {count}");
+
+// ----------------------  END  --------------------------------------------------------------------
+
+// +++++++++++++++++++  АЛЬТЕРНАТИВА ВВОДА ЧИСЛА КАК СТРОКИ  +++++++++++++++++++++++++++++++++++++++
+
+//------------------------  START  -----------------------------------------------------------------
+
+string DataEntry(string str) // метод ввода числа как строки
 {
     Console.WriteLine(str);
-    int num = int.Parse(Console.ReadLine());
+    string num = Console.ReadLine();
     return num;
-}
-
-int CountHunter(int number) // метод подсчёта количества цифр
-{
-    int i = 0;
-    if (number < 0) number = -number;
-    for (i = 0; number > 0; i++)
-    {
-        number = number / 10;
-    }
-    return i;
 }
 
 //---------------------  РАБОЧАЯ ОБЛАСТЬ  ----------------------------------------------------------
 
-int number = DataEntry("Введите число: ");
-int count = CountHunter(number);
+string number = DataEntry("Введите число: ");
+int count = number.Length;
 
 Console.WriteLine($"Количество цифр:  {count}");
 
